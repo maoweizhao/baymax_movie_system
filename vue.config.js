@@ -26,5 +26,16 @@ module.exports = {
     // },
     // 配置自动启动浏览器
     open: true
+  },
+  // 配置icon图标
+  pwa: {
+    iconPaths: {
+      favicon32: 'favicon.ico',
+      favicon16: 'favicon.ico',
+      appleTouchIcon: 'favicon.ico',
+      maskIcon: 'favicon.ico',
+      msTileImage: 'favicon.ico'
+    }
+
   }
 }
