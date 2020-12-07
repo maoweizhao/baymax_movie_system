@@ -20,7 +20,6 @@ export default {
 </script>
 <style lang='less' scoped>
 .Navbar{
-    position:relative;
     width: 100%;
     height: 68px;
     background-color: #FE5447;
@@ -63,8 +62,7 @@ export default {
     }
     .user {
       float:left;
-      position:absolute;
-      left: px;
+      padding-left: 30px;
       line-height: 68px;
       width: 20%;
       height: 68px;
