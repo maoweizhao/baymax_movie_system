@@ -10,8 +10,17 @@
                 <li><a href="javaScript:;">纪录片</a></li>
             </ul>
         </div>
-        <div class="search"> <Input search placeholder="搜索" /></div>
-        <div class="user"><Avatar shape="square" icon="ios-person" size="large" /></div>
+        <div class="search_box"> <Input search placeholder="" /></div>
+        <div class="user">
+        <Dropdown>
+         <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" size="50" />
+            <DropdownMenu slot="list">
+            <DropdownItem>登录</DropdownItem>
+            <DropdownItem>注册</DropdownItem>
+            <DropdownItem>注销</DropdownItem>
+            </DropdownMenu>
+        </Dropdown>
+        </div>
     </div>
 </template>
 <script>
@@ -19,31 +28,35 @@ export default {
 }
 </script>
 <style lang='less' scoped>
+@h:68px;
+@100:100%;
+.mixins {
+    width: @100;
+    height: @100;
+}
 .Navbar{
-    width: 100%;
-    height: 68px;
+    display: flex;
+    height: @h;
     background-color: #FE5447;
+    justify-content: flex-start;
     color:#ffffff;
     .logo {
-      float:left;
-      width: 20%;
-      height: 68px;
+      flex: 0.2;
+      height: @h;
       a {
       display: block;
-      height: 100%;
-      width: 100%;
+      .mixins();
       background: url('../assets/logo.png') no-repeat;
-      background-size: 100% 100%;
+      background-size: @100;
       }
     }
     .menu {
-      float: left;
-      width: 40%;
-      height: 68px;
+      flex: 0.4;
+      height: @h;
       li {
         width: 20%;
-        height: 68px;
-        line-height: 68px;
+        height: @h;
+        line-height: @h;
         text-align: center;
           float: left;
           a {
@@ -54,18 +67,17 @@ export default {
           background-color: #64462E;
       }
     }
-    .search {
-        float:left;
-        line-height: 68px;
-        width: 20%;
-        height: 68px;
+    .search_box{
+        line-height: @h;
+        flex: 0.3;
+        height: @h;
+        padding: 0 80px;
     }
     .user {
-      float:left;
-      padding-left: 30px;
-      line-height: 68px;
-      width: 20%;
-      height: 68px;
+        padding-left: 30px;
+        line-height: @h;
+        flex: 0.1;
+        height: @h;
     }
 }
 </style>
