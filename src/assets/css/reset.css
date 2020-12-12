@@ -49,3 +49,11 @@ table {
 a {
   text-decoration: none;
 }
+input{
+	background:none;  
+	border:none;
+	outline: none; 
+}
+input:focus{   
+	border:none;
+}
